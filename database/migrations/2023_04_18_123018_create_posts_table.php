@@ -18,7 +18,8 @@ return new class extends Migration
             $table->text("content");
             $table->string("image");
             $table->foreignId("author_id")->constrained("users");
-            $table->timestamps();
+            $table->timestamps("created_at");
+            $table->timestamps("updated_at");
         });
     }
 

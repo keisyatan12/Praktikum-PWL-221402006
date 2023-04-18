@@ -24,6 +24,8 @@ class UsersTableSeeder extends Seeder
                 'email_verified_at'=> $faker->dateTime(),
                 'password'=> $faker->password
             ];
+            
         }
+        DB::table("users")->insert($users);
     }
 }
